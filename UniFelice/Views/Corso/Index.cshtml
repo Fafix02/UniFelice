@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model List<ICorsoLaurea>
+
+@{
+}
+
+<h1>Elenco Corsi</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Descrizione</th>
+            <th>Dettaglio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(ICorsoLaurea corso in Model)
+        {
+            <tr>
+                <td>@corso.Codice</td>
+                <td>@corso.Descrizione</td>
+                <td>
+                    <a asp-area="" asp-controller="" asp-action="" asp-route-id="">
+                        Dettaglio
+                    </a>
+                 </td>
+            </tr>
+        }
+    </tbody>
+</table>

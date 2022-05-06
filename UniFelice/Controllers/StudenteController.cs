@@ -18,14 +18,14 @@ namespace UniFelice.Controllers
             return View(archivio.Studenti);
         }
 
-        [HttpGet]
+        [HttpGet("Dettaglio/{id}")]
         public IActionResult Dettaglio(string id)
         {
             foreach(IStudente s in archivio.Studenti)
             {
                 if(s.Matricola == id)
                 {
-                    return View(id);
+                    return View(s);
                 }
             }
             return BadRequest($"Errore studente con matricola {id} non trovato");

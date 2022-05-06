@@ -2,10 +2,17 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@model int
+@model IStudente
 
 @{
 
 }
 
-@Model
+<h5>Nome completo:</h5>
+@Model.NomeCompleto
+<h5>Matricola</h5>
+@Model.Matricola
+<br />
+<a asp-area="" asp-controller="Studente" asp-action="Index">
+    <input type="button" value="Torna alla lista" />
+</a>
