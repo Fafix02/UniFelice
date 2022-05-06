@@ -12,5 +12,20 @@ namespace UniFelice.Models.Xml
         public string Codice => node.Attributes["codice"].InnerText;
 
         public string Descrizione => node.SelectSingleNode("descrizione").InnerText;
+
+        public List<string> CodEsami
+        {
+            get
+            {
+                List<string> toReturn = new ();
+                string path = "esame";
+                XmlNodeList nodes = node.SelectNodes(path);
+                foreach (XmlNode node in nodes)
+                {
+                    toReturn.Add(node.InnerText);
+                }
+                return toReturn;
+            }
+        }
     }
 }

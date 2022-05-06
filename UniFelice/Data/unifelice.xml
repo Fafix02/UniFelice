@@ -26,6 +26,9 @@
 		<esame codice="INGANA1" />
 		<esame codice="INGANA2" />
 	</corso>
+	<corso codice="STRFIL">
+		<descrizione><![CDATA[Storia della filosofia]]></descrizione>
+	</corso>
 	<esame codice="ANA1">
 		<descrizione><![CDATA[Analisi Matematica A]]></descrizione>
 		<titolare><![CDATA[Paolo Rossi]]></titolare>

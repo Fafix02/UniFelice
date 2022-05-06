@@ -1,5 +1,33 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+@model ICorsoLaurea
+
 @{
 }
+
+<h5>Codice:</h5>
+@Model.Codice
+<h5>Descrizione</h5>
+@Model.Descrizione
+<br />
+@if (@Model.CodEsami.Count != 0)
+{
+    <h5>Lista esami</h5>
+    <ul>
+        @foreach (string codCorso in Model.CodEsami)
+        {
+            <li>@codCorso</li>
+        }
+    </ul>
+    <p>N totale esami: @Model.CodEsami.Count</p>
+    <br />
+}
+else
+{
+    <p>Nessun esame presente nel corso</p>
+}
+<a asp-area="" asp-controller="Corso" asp-action="Index">
+    <input type="button" value="Torna alla lista" />
+</a>

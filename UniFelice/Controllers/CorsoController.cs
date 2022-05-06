@@ -19,9 +19,17 @@ namespace UniFelice.Controllers
             return View(archive.Corsi);
         }
 
-        public IActionResult Detail()
+        [HttpGet("Detail/{id}")]
+        public IActionResult Detail(string id)
         {
-            return View();
+            foreach (ICorsoLaurea c in archive.Corsi)
+            {
+                if (c.Codice == id)
+                {
+                    return View(c);
+                }
+            }
+            return BadRequest($"Errore corso con codice {id} non trovato");
         }
     }
 }
