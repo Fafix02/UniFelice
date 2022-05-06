@@ -22,7 +22,7 @@ namespace UniFelice.Models.Xml
                 XmlNodeList nodes = node.SelectNodes(path);
                 foreach (XmlNode node in nodes)
                 {
-                    toReturn.Add(node.InnerText);
+                    toReturn.Add(node.Attributes["codice"].InnerText);
                 }
                 return toReturn;
             }

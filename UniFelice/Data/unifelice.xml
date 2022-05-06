@@ -25,9 +25,14 @@
 		<descrizione><![CDATA[Ingegneria Informatica]]></descrizione>
 		<esame codice="INGANA1" />
 		<esame codice="INGANA2" />
+		<esame codice="INGGEO" />
 	</corso>
 	<corso codice="STRFIL">
 		<descrizione><![CDATA[Storia della filosofia]]></descrizione>
+		<esame codice="STRGEO" />
+	</corso>
+	<corso codice="FILSTR">
+		<descrizione><![CDATA[Filosofia della Storia]]></descrizione>
 	</corso>
 	<esame codice="ANA1">
 		<descrizione><![CDATA[Analisi Matematica A]]></descrizione>
@@ -55,5 +60,8 @@
 			<data><![CDATA[2022-04-20]]></data>
 			<tipo><![CDATA[scritto]]></tipo>
 		</appello>
+	</esame>
+	<esame codice="GEO">
+		
 	</esame>
 </uni>
