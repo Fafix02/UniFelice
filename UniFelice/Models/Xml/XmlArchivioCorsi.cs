@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Diagnostics;
+using System.Xml;
 
 namespace UniFelice.Models.Xml
 {
@@ -27,9 +28,9 @@ namespace UniFelice.Models.Xml
                 XmlNodeList nodes = Doc.SelectNodes(pattern);
                 foreach (XmlNode node in nodes)
                 {
+                    Debug.WriteLine(node.SelectSingleNode("descrizione").InnerText);
                     toReturn.Add(new XmlCorso(node));
                 }
-
                 return toReturn;
             } 
         }

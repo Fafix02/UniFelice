@@ -5,16 +5,17 @@
 @model ICorsoLaurea
 
 @{
+    ViewData["Title"] = "Info Corso";
 }
 
 <h5>Codice:</h5>
 @Model.Codice
-<h5>Descrizione</h5>
+<h5>Descrizione:</h5>
 @Model.Descrizione
 <br />
 @if (@Model.CodEsami.Count != 0)
 {
-    <h5>Lista esami</h5>
+    <h5>Piano di studi:</h5>
     <ul>
         @foreach (string codCorso in Model.CodEsami)
         {

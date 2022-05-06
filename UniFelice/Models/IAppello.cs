@@ -5,7 +5,8 @@
         public enum Tipo
         {
             SCRITTO,
-            ORALE
+            ORALE,
+            MISTO
         }
         public DateTime Data { get; }
         public Tipo TipoAppello { get; }

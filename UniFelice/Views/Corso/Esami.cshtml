@@ -2,31 +2,33 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 
-@model List<ICorsoLaurea>
+@model List<IEsame>
 
 @{
-    ViewData["Title"] = "Lista Corsi";
+    ViewData["Title"] = "Esami offerti";
 }
 
-<h1>Elenco Corsi di Laurea</h1>
+<h1>Esami offerti nella nostra università</h1>
 <table class="table-success">
     <thead>
         <tr>
             <th>Codice</th>
             <th>Descrizione</th>
-            <th>Numero di esami</th>
+            <th>Titolare</th>
+            <th>Numero di assistenti</th>
             <th>Dettaglio</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(ICorsoLaurea corso in Model)
+        @foreach(IEsame esame in Model)
         {
             <tr>
-                <td>@corso.Codice</td>
-                <td>@corso.Descrizione</td>
-                <td>@corso.CodEsami.Count</td>
+                <td>@esame.Codice</td>
+                <td>@esame.Descrizione</td>
+                <td>@esame.Titolare</td>
+                <td>@esame.Assistenti.Count</td>
                 <td>
-                    <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@corso.Codice">
+                    <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="">
                         Dettaglio
                     </a>
                  </td>

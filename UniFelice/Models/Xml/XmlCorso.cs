@@ -20,9 +20,9 @@ namespace UniFelice.Models.Xml
                 List<string> toReturn = new ();
                 string path = "esame";
                 XmlNodeList nodes = node.SelectNodes(path);
-                foreach (XmlNode node in nodes)
+                foreach (XmlNode n in nodes)
                 {
-                    toReturn.Add(node.Attributes["codice"].InnerText);
+                    toReturn.Add(n.Attributes["codice"].InnerText);
                 }
                 return toReturn;
             }
