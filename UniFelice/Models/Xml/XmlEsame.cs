@@ -37,14 +37,14 @@ namespace UniFelice.Models.Xml
                 XmlNodeList nodes = node.SelectNodes(pattern);
                 foreach (XmlNode n in nodes)
                 {
-                    toReturn.Add(new XmlAppello(n));
+                    toReturn.Add(new XmlAppello(n, Codice));
                 }
                 return toReturn;
             }
         }
 
-        public string? Descrizione => "k";//node.SelectSingleNode("descrizione").InnerText;
+        public string? Descrizione => node.SelectSingleNode("descrizione").InnerText;
 
-        public string Titolare => "p";//node.SelectSingleNode("titolare").InnerText;
+        public string Titolare => node.SelectSingleNode("titolare").InnerText;
     }
 }

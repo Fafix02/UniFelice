@@ -5,9 +5,10 @@ namespace UniFelice.Models.Xml
     public class XmlAppello : IAppello
     {
         private readonly XmlNode node;
-        public XmlAppello(XmlNode node)
+        public XmlAppello(XmlNode node, string codEsame)
         {
             this.node = node;
+            CodEsame = codEsame;
         }
         public DateTime Data
         {
@@ -15,7 +16,7 @@ namespace UniFelice.Models.Xml
             {
                 string txt = node.SelectSingleNode("data").InnerText;
                 string[] single = txt.Split('-');
-                return new DateTime(int.Parse(single[0]), int.Parse(single[0]), int.Parse(single[0]));
+                return new DateTime(int.Parse(single[0]), int.Parse(single[1]), int.Parse(single[2]));
             }
         }
 
@@ -35,6 +36,8 @@ namespace UniFelice.Models.Xml
             }
         }
 
-        public IEsame Esame => throw new NotImplementedException();
+        public string CodEsame { get; set; }
+
+        public string Codice => node.Attributes["codice"].InnerText;
     }
 }

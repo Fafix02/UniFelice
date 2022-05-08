@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model IEsame
+
+@{
+    ViewData["Title"] = "Dettagli Esame";
+}
+
+<h5>Codice:</h5>
+@Model.Codice
+<h5>Descrizione:</h5>
+@Model.Descrizione
+<h5>Titolare:</h5>
+@Model.Titolare
+<br />
+@if (@Model.Assistenti.Count != 0)
+{
+    <h5>Assistenti professore:</h5>
+    <ul>
+        @foreach (string assistente in Model.Assistenti)
+        {
+            <li>@assistente</li>
+        }
+    </ul>
+    <p>N totale assistenti: @Model.Assistenti.Count</p>
+    <br />
+}
+else
+{
+    <h2>Nessun assistente al professore</h2>
+}
+@if (@Model.Appelli.Count != 0)
+{
+    <h5>Appelli disponibli:</h5>
+    <ul>
+        @foreach (IAppello appello in Model.Appelli)
+        {
+            <li>Esame: @appello.Codice</li>
+            <li>Data: @appello.Data</li>
+            <li>Tipo appello: @appello.TipoAppello</li>
+            <br />
+        }
+    </ul>
+    <p>N totale appelli: @Model.Appelli.Count</p>
+    <br />
+}
+else
+{
+    <h2>Nessun Appello al momento disponibile</h2>
+}
+<a asp-area="" asp-controller="Corso" asp-action="Esami">
+    <input type="button" value="Torna alla lista" />
+</a>

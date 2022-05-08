@@ -21,17 +21,17 @@
 			<valutazione appello="ANA220220420"><![CDATA[18]]></valutazione>
 		</libretto>
 	</studente>
-	<corso codice="INGINF">
+	<corso codice="ING">
 		<descrizione><![CDATA[Ingegneria Informatica]]></descrizione>
-		<esame codice="INGANA1" />
-		<esame codice="INGANA2" />
-		<esame codice="INGGEO" />
+		<esame codice="ANA1" />
+		<esame codice="ANA2" />
+		<esame codice="GEO" />
 	</corso>
-	<corso codice="STRFIL">
+	<corso codice="STR">
 		<descrizione><![CDATA[Storia della filosofia]]></descrizione>
-		<esame codice="STRGEO" />
+		<esame codice="GEO" />
 	</corso>
-	<corso codice="FILSTR">
+	<corso codice="FIL">
 		<descrizione><![CDATA[Filosofia della Storia]]></descrizione>
 	</corso>
 	<esame codice="ANA1">
@@ -62,6 +62,7 @@
 		</appello>
 	</esame>
 	<esame codice="GEO">
-		
+		<descrizione><![CDATA[Basi della Geografia]]></descrizione>
+		<titolare><![CDATA[Lucia Verdi]]></titolare>
 	</esame>
 </uni>

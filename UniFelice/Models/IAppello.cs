@@ -10,6 +10,7 @@
         }
         public DateTime Data { get; }
         public Tipo TipoAppello { get; }
-        public IEsame Esame { get; }
+        public string CodEsame { get; }
+        public string Codice { get; }
     }
 }

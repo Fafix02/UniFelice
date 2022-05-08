@@ -39,5 +39,18 @@ namespace UniFelice.Controllers
         {
             return View(esami.Esami);
         }
+
+        [HttpGet("DetailEsame/{id}")]
+        public IActionResult DetailEsame(string id)
+        {
+            foreach (IEsame e in esami.Esami)
+            {
+                if (e.Codice == id)
+                {
+                    return View(e);
+                }
+            }
+            return BadRequest($"Errore esame con codice {id} non trovato");
+        }
     }
 }

@@ -9,12 +9,13 @@
 }
 
 <h1>Esami offerti nella nostra università</h1>
-<table class="table-success">
+<table class="table table-success table-striped">
     <thead>
         <tr>
             <th>Codice</th>
             <th>Descrizione</th>
             <th>Titolare</th>
+            <th>Numero appelli</th>
             <th>Numero di assistenti</th>
             <th>Dettaglio</th>
         </tr>
@@ -26,9 +27,10 @@
                 <td>@esame.Codice</td>
                 <td>@esame.Descrizione</td>
                 <td>@esame.Titolare</td>
+                <td>@esame.Appelli.Count</td>
                 <td>@esame.Assistenti.Count</td>
                 <td>
-                    <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="">
+                    <a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@esame.Codice">
                         Dettaglio
                     </a>
                  </td>

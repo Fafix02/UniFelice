@@ -17,9 +17,9 @@
 {
     <h5>Piano di studi:</h5>
     <ul>
-        @foreach (string codCorso in Model.CodEsami)
+        @foreach (string codEsame in Model.CodEsami)
         {
-            <li>@codCorso</li>
+            <li><a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@codEsame">@codEsame</a></li>
         }
     </ul>
     <p>N totale esami: @Model.CodEsami.Count</p>
