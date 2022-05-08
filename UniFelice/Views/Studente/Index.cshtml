@@ -14,6 +14,8 @@
         <tr>
             <th>Matricola</th>
             <th>Nome</th>
+            <th>Corso</th>
+            <th>Esami superati</th>
             <th>Dettaglio</th>
         </tr>
     </thead>
@@ -23,6 +25,8 @@
             <tr>
                 <td>@studente.Matricola</td>
                 <td>@studente.NomeCompleto</td>
+                <td><a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@studente.CorsoIscritto">@studente.CorsoIscritto</a></td>
+                <td>@studente.Libretto.Count</td>
                 <td>
                     <a asp-area="" asp-controller="Studente" asp-action="Dettaglio" asp-route-id="@studente.Matricola">
                         Dettaglio
@@ -32,3 +36,28 @@
         }
     </tbody>
 </table>
+<br />
+@{
+    List<string> codEsami = new();
+}
+@foreach(IStudente studente in Model)
+{    
+    @if (!codEsami.Contains(studente.CorsoIscritto))
+    {
+        codEsami.Add(studente.CorsoIscritto);
+    }
+}
+@foreach(string codEsame in codEsami)
+{
+    <h5>Studenti iscritti al corso @codEsame:</h5>
+    <ol>
+    @foreach (IStudente studente in Model)
+    {
+            @if (studente.CorsoIscritto == codEsame)
+            {
+                <li>@studente.NomeCompleto</li>
+            }
+    }
+    </ol>
+    <br />
+}

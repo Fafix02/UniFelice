@@ -2,7 +2,7 @@
 {
     public interface IValutazione
     {
-        public IAppello Appello { get; }
+        public string Appello { get; }
         public int Voto { get; }
     }
 }

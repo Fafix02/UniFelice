@@ -10,8 +10,24 @@
 
 <h5>Nome completo:</h5>
 @Model.NomeCompleto
-<h5>Matricola</h5>
+<h5>Matricola:</h5>
 @Model.Matricola
+<h5>Corso in cui è iscritto:</h5>
+<a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@Model.CorsoIscritto">@Model.CorsoIscritto</a>
+@if(Model.Libretto.Count != 0){
+    <h5>Libretto valutazioni</h5>
+    <ol>
+    @foreach (var valutazione in Model.Libretto)
+    {
+        <li>@valutazione.Appello --- @valutazione.Voto</li>
+    }
+    </ol>
+}
+else
+{
+    <h5>Nessun esame superato</h5>
+}
+<br />
 <br />
 <a asp-area="" asp-controller="Studente" asp-action="Index">
     <input type="button" value="Torna alla lista" />

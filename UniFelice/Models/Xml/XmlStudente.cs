@@ -9,8 +9,8 @@ namespace UniFelice.Models.Xml
         {
             this.nodo = nodo;
         }
-        public string Matricola 
-        { 
+        public string Matricola
+        {
             get
             {
                 return nodo.Attributes["matricola"].InnerText;
@@ -22,6 +22,23 @@ namespace UniFelice.Models.Xml
             {
                 string nome = nodo.SelectSingleNode("name").InnerText;
                 return nome;
+            }
+        }
+
+        public string CorsoIscritto => nodo.SelectSingleNode("iscritto").InnerText;
+
+        public List<IValutazione> Libretto
+        {
+            get
+            {
+                List<IValutazione> toReturn = new();
+                string pattern = "libretto/valutazione";
+                XmlNodeList nodes = nodo.SelectNodes(pattern);
+                foreach (XmlNode n in nodes)
+                {
+                    toReturn.Add(new XmlValutazione(n));
+                }
+                return toReturn;
             }
         }
     }

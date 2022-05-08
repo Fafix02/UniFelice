@@ -2,6 +2,7 @@
 <uni>
 	<studente matricola="ING00001301">
 		<name><![CDATA[Giuliano Losi]]></name>
+		<iscritto><![CDATA[ING]]></iscritto>
 		<libretto>
 			<valutazione appello="ANA120220419"><![CDATA[27]]></valutazione>
 			<valutazione appello="ANA220220420"><![CDATA[24]]></valutazione>
@@ -9,16 +10,24 @@
 	</studente>
 	<studente matricola="ING00009341">
 		<name><![CDATA[Chiara Bonacolsi]]></name>
+		<iscritto><![CDATA[ING]]></iscritto>
 		<libretto>
 			<valutazione appello="ANA120220419"><![CDATA[30]]></valutazione>
 			<valutazione appello="ANA220220420"><![CDATA[30]]></valutazione>
 		</libretto>
 	</studente>
-	<studente matricola="ING00010201">
+	<studente matricola="FIL00010201">
 		<name><![CDATA[Matteo Rossi]]></name>
+		<iscritto><![CDATA[FIL]]></iscritto>
 		<libretto>
 			<valutazione appello="ANA120220419"><![CDATA[18]]></valutazione>
 			<valutazione appello="ANA220220420"><![CDATA[18]]></valutazione>
+		</libretto>
+	</studente>
+	<studente matricola="FIL0000001231">
+		<name><![CDATA[Ari Stotele]]></name>
+		<iscritto><![CDATA[FIL]]></iscritto>
+		<libretto>
 		</libretto>
 	</studente>
 	<corso codice="ING">

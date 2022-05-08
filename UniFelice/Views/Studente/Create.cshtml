@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model string
+
+@{
+    ViewData["Title"] = "Registrazione studente";
+}
+
+@if (Model.Length != 0)
+{
+    <h1>@Model</h1>
+}
+
+<h1>Creazione nuovo studente: </h1>
+<form method="post" asp-area="" asp-controller="Studente" asp-action="Success">
+    <label for="txtMat">Matricola:</label>
+    <input type="text" id="txtMat" name="Matricola" /> <br />
+    <label for="txtNome">Nome completo:</label>
+    <input type="text" id="txtNome" name="NomeCognome"/> <br />
+    <label for="txtCorso">Corso a cui è iscritto:</label>
+    <input type="text" id="txtCorso" name="Corso" /> <br />
+    <input type="submit" value="Crea studente"/>
+</form>
