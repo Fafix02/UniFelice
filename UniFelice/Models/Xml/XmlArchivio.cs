@@ -33,5 +33,16 @@ namespace UniFelice.Models.xml
                 return daRitornare;
             }
         }
+
+        public void Add(string matr, string fullName, string course)
+        {
+            XmlElement XEle = Doc.CreateElement("studente");
+            XEle.SetAttribute("matricola", matr);
+
+            var importNode = Doc.ImportNode(XEle, true);
+            Doc.AppendChild(importNode);
+
+            Doc.Save(percorso);
+        }
     }
 }

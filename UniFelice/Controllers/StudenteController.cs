@@ -58,12 +58,20 @@ namespace UniFelice.Controllers
             {
                 return View("Create", $"Errore non esiste un corso con codice {Corso}");
             }
-            XmlDocument doc = new();
-            doc.LoadXml(Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
-            XmlElement XEle = doc.CreateElement("stu");
-            XEle.SetAttribute("matricola", Matricola);
-            doc.AppendChild(XEle);
-            doc.Save(Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
+            //archivio.Add(Matricola, NomeCognome, Corso);
+            return View();
+        }
+
+
+        public IActionResult Register()
+        {
+            return View(archivio.Studenti);
+        }
+
+        [HttpPost]
+        public IActionResult Check([FromForm] string Matricola, [FromForm] int VotoValutazione, [FromForm] string CodAppello)
+        {
+            Debug.WriteLine($"{Matricola} - {VotoValutazione} - {CodCorso}");
             return View();
         }
     }
