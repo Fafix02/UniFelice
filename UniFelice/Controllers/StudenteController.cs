@@ -71,7 +71,7 @@ namespace UniFelice.Controllers
         [HttpPost]
         public IActionResult Check([FromForm] string Matricola, [FromForm] int VotoValutazione, [FromForm] string CodAppello)
         {
-            Debug.WriteLine($"{Matricola} - {VotoValutazione} - {CodCorso}");
+            Debug.WriteLine($"{Matricola} - {VotoValutazione} - {CodAppello}");
             return View();
         }
     }
