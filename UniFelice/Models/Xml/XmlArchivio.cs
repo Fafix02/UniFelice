@@ -68,8 +68,8 @@ namespace UniFelice.Models.xml
             doc.Load(percorso);
 
             XmlNode root = doc.DocumentElement;
-            XmlNode studenteNode;
-            XmlNodeList students = root.SelectNodes("uni/studente");
+            XmlNode studenteNode = root.SelectNodes("studente")[0];
+            XmlNodeList students = root.SelectNodes("studente");
             foreach (XmlNode student in students)
             {
                 if (student.Attributes["matricola"].InnerText == matricola)
@@ -77,23 +77,19 @@ namespace UniFelice.Models.xml
                     studenteNode = student;
                 }
             }
+            XmlNode libretto = studenteNode.SelectSingleNode("libretto");
 
             //Create a new node.
-            //XmlElement fullName = doc.CreateElement("name");
-            //fullName.InnerText = FullName;
-            //student.AppendChild(fullName);
-            //XmlElement course = doc.CreateElement("iscritto");
-            //course.InnerText = Course;
-            //student.AppendChild(course);
-            //XmlElement libretto = doc.CreateElement("libretto");
-            //libretto.InnerText = "";
-            //student.AppendChild(libretto);
+            XmlElement Score = doc.CreateElement("valutazione");
+            Score.InnerText = "" + valutazione;
+            Score.SetAttribute("appello", codAppello);
+            libretto.AppendChild(Score);
 
-            ////Add the node to the document.
-            //root.AppendChild(student);
+            //Add the node to the document.
+            libretto.AppendChild(Score);
 
             Debug.WriteLine("Display the modified XML...\n" + doc);
-            doc.Save(percorso);
+            doc.Save(Console.Out);
         }
     }
 }
