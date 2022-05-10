@@ -9,10 +9,9 @@
 }
 
 <h5>Codice:</h5>
-@Model.Codice
+<strong>@Model.Codice</strong><br />
 <h5>Descrizione:</h5>
-@Model.Descrizione
-<br />
+@Model.Descrizione<br />
 @if (@Model.CodEsami.Count != 0)
 {
     <h5>Piano di studi:</h5>

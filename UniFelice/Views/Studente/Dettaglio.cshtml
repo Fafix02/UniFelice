@@ -9,17 +9,20 @@
 }
 
 <h5>Nome completo:</h5>
-@Model.NomeCompleto
+@Model.NomeCompleto <br />
 <h5>Matricola:</h5>
-@Model.Matricola
+<strong>@Model.Matricola</strong> <br />
 <h5>Corso in cui è iscritto:</h5>
 <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@Model.CorsoIscritto">@Model.CorsoIscritto</a>
-@if(Model.Libretto.Count != 0){
-    <h5>Libretto valutazioni</h5>
+@if(Model.Libretto.Voti.Count != 0){
+    <h5>Tipologia libretto:</h5>
+    @Model.Libretto.Type
+    <br />
+    <h5>Libretto valutazioni:<br /><strong>Appello</strong> - Valutazione</h5>
     <ol>
-    @foreach (var valutazione in Model.Libretto)
+    @foreach (var valutazione in Model.Libretto.Voti)
     {
-        <li>@valutazione.Appello --- @valutazione.Voto</li>
+        <li><strong>@valutazione.Appello</strong> --- @valutazione.Voto</li>
     }
     </ol>
 }
@@ -30,5 +33,5 @@ else
 <br />
 <br />
 <a asp-area="" asp-controller="Studente" asp-action="Index">
-    <input type="button" value="Torna alla lista" />
+    <input type="button" value="Torna alla lista studenti" />
 </a>

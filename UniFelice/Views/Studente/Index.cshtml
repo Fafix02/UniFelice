@@ -23,10 +23,10 @@
         @foreach(IStudente studente in Model)
         {
             <tr>
-                <td>@studente.Matricola</td>
+                <td><strong>@studente.Matricola</strong></td>
                 <td>@studente.NomeCompleto</td>
                 <td><a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@studente.CorsoIscritto">@studente.CorsoIscritto</a></td>
-                <td>@studente.Libretto.Count</td>
+                <td>@studente.Libretto.Voti.Count</td>
                 <td>
                     <a asp-area="" asp-controller="Studente" asp-action="Dettaglio" asp-route-id="@studente.Matricola">
                         Dettaglio
@@ -49,7 +49,8 @@
 }
 @foreach(string codEsame in codEsami)
 {
-    <h5>Studenti iscritti al corso @codEsame:</h5>
+    <h5>Studenti iscritti al corso 
+        <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@codEsame">@codEsame:</a></h5>
     <ol>
     @foreach (IStudente studente in Model)
     {

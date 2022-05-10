@@ -27,19 +27,6 @@ namespace UniFelice.Models.Xml
 
         public string CorsoIscritto => nodo.SelectSingleNode("iscritto").InnerText;
 
-        public List<IValutazione> Libretto
-        {
-            get
-            {
-                List<IValutazione> toReturn = new();
-                string pattern = "libretto/valutazione";
-                XmlNodeList nodes = nodo.SelectNodes(pattern);
-                foreach (XmlNode n in nodes)
-                {
-                    toReturn.Add(new XmlValutazione(n));
-                }
-                return toReturn;
-            }
-        }
+        public ILibretto Libretto => new XmlLibretto(nodo.SelectSingleNode("libretto"));
     }
 }

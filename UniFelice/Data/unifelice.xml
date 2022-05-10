@@ -3,7 +3,7 @@
   <studente matricola="ING00001301">
     <name><![CDATA[Giuliano Losi]]></name>
     <iscritto><![CDATA[ING]]></iscritto>
-    <libretto>
+    <libretto type="CARTACEO">
       <valutazione appello="ANA120220419"><![CDATA[27]]></valutazione>
       <valutazione appello="ANA220220420"><![CDATA[24]]></valutazione>
     </libretto>
@@ -11,7 +11,7 @@
   <studente matricola="ING00009341">
     <name><![CDATA[Chiara Bonacolsi]]></name>
     <iscritto><![CDATA[ING]]></iscritto>
-    <libretto>
+    <libretto type="DIGITALE">
       <valutazione appello="ANA120220419"><![CDATA[30]]></valutazione>
       <valutazione appello="ANA220220420"><![CDATA[30]]></valutazione>
     </libretto>
@@ -19,7 +19,7 @@
   <studente matricola="FIL00010201">
     <name><![CDATA[Matteo Rossi]]></name>
     <iscritto><![CDATA[FIL]]></iscritto>
-    <libretto>
+    <libretto type="CARTACEO">
       <valutazione appello="ANA120220419"><![CDATA[18]]></valutazione>
       <valutazione appello="ANA220220420"><![CDATA[18]]></valutazione>
     </libretto>
@@ -81,14 +81,14 @@
   <studente matricola="K000123A">
     <name>Angelo Bonicelli</name>
     <iscritto>FIL</iscritto>
-    <libretto>
+    <libretto type="DIGITALE">
       <valutazione appello="ANA120220419">18</valutazione>
     </libretto>
   </studente>
   <studente matricola="000">
     <name>Dio Santo</name>
     <iscritto>STR</iscritto>
-    <libretto>
+    <libretto type="">
 		<valutazione appello="ANA120220419">33</valutazione>
 		<valutazione appello="ANA220220420">33</valutazione>
 		<valutazione appello="GEO220221010">33</valutazione>
@@ -97,7 +97,7 @@
   <studente matricola="ING000123124A">
     <name>Costanzo Costantini</name>
     <iscritto>ING</iscritto>
-    <libretto>
+    <libretto type="cartaceo">
     </libretto>
   </studente>
 </uni>
