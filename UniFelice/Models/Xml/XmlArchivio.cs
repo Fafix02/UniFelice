@@ -89,7 +89,7 @@ namespace UniFelice.Models.xml
             libretto.AppendChild(Score);
 
             Debug.WriteLine("Display the modified XML...\n" + doc);
-            doc.Save(Console.Out);
+            doc.Save(percorso);
         }
     }
 }

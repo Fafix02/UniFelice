@@ -78,6 +78,13 @@
     <name>Angelo Bonicelli</name>
     <iscritto>FIL</iscritto>
     <libretto>
+      <valutazione appello="a">18</valutazione>
+    </libretto>
+  </studente>
+  <studente matricola="000">
+    <name>Dio Santo</name>
+    <iscritto>ING</iscritto>
+    <libretto>
     </libretto>
   </studente>
 </uni>
