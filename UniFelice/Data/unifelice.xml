@@ -87,4 +87,10 @@
     <libretto>
     </libretto>
   </studente>
+  <studente matricola="maurizio">
+    <name>costanzo</name>
+    <iscritto>ING</iscritto>
+    <libretto>
+    </libretto>
+  </studente>
 </uni>
