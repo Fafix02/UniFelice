@@ -10,7 +10,7 @@ Requirments:
 • Registrare un voto sul libretto di uno studente
 
 Implementation:
-• Corso - Index
+• Corso - Index-Detail
 • Corso - DetailEsame
 • Studente - Index //After the table
 • Studente - Dettaglio
