@@ -1,4 +1,5 @@
-﻿using System.Xml;
+﻿using System.Diagnostics;
+using System.Xml;
 using UniFelice.Models.Xml;
 
 namespace UniFelice.Models.xml
@@ -34,15 +35,65 @@ namespace UniFelice.Models.xml
             }
         }
 
-        public void Add(string matr, string fullName, string course)
+        public void Add(string Matr, string FullName, string Course)
         {
-            XmlElement XEle = Doc.CreateElement("studente");
-            XEle.SetAttribute("matricola", matr);
+            XmlDocument doc = new();
+            doc.Load(percorso);
 
-            var importNode = Doc.ImportNode(XEle, true);
-            Doc.AppendChild(importNode);
+            XmlNode root = doc.DocumentElement;
 
-            Doc.Save(percorso);
+            //Create a new node.
+            XmlElement student = doc.CreateElement("studente");
+            student.SetAttribute("matricola", Matr);
+            XmlElement fullName = doc.CreateElement("name");
+            fullName.InnerText = FullName;
+            student.AppendChild(fullName);
+            XmlElement course = doc.CreateElement("iscritto");
+            course.InnerText = Course;
+            student.AppendChild(course);
+            XmlElement libretto = doc.CreateElement("libretto");
+            libretto.InnerText = "";
+            student.AppendChild(libretto);
+
+            //Add the node to the document.
+            root.AppendChild(student);
+
+            Debug.WriteLine("Display the modified XML...\n" + doc);
+            doc.Save(percorso);
+        }
+
+        public void AddValutazione(string matricola, int valutazione, string codAppello)
+        {
+            XmlDocument doc = new();
+            doc.Load(percorso);
+
+            XmlNode root = doc.DocumentElement;
+            XmlNode studenteNode;
+            XmlNodeList students = root.SelectNodes("uni/studente");
+            foreach (XmlNode student in students)
+            {
+                if (student.Attributes["matricola"].InnerText == matricola)
+                {
+                    studenteNode = student;
+                }
+            }
+
+            //Create a new node.
+            //XmlElement fullName = doc.CreateElement("name");
+            //fullName.InnerText = FullName;
+            //student.AppendChild(fullName);
+            //XmlElement course = doc.CreateElement("iscritto");
+            //course.InnerText = Course;
+            //student.AppendChild(course);
+            //XmlElement libretto = doc.CreateElement("libretto");
+            //libretto.InnerText = "";
+            //student.AppendChild(libretto);
+
+            ////Add the node to the document.
+            //root.AppendChild(student);
+
+            Debug.WriteLine("Display the modified XML...\n" + doc);
+            doc.Save(percorso);
         }
     }
 }

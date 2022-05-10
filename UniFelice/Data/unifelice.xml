@@ -1,77 +1,83 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <uni>
-	<studente matricola="ING00001301">
-		<name><![CDATA[Giuliano Losi]]></name>
-		<iscritto><![CDATA[ING]]></iscritto>
-		<libretto>
-			<valutazione appello="ANA120220419"><![CDATA[27]]></valutazione>
-			<valutazione appello="ANA220220420"><![CDATA[24]]></valutazione>
-		</libretto>
-	</studente>
-	<studente matricola="ING00009341">
-		<name><![CDATA[Chiara Bonacolsi]]></name>
-		<iscritto><![CDATA[ING]]></iscritto>
-		<libretto>
-			<valutazione appello="ANA120220419"><![CDATA[30]]></valutazione>
-			<valutazione appello="ANA220220420"><![CDATA[30]]></valutazione>
-		</libretto>
-	</studente>
-	<studente matricola="FIL00010201">
-		<name><![CDATA[Matteo Rossi]]></name>
-		<iscritto><![CDATA[FIL]]></iscritto>
-		<libretto>
-			<valutazione appello="ANA120220419"><![CDATA[18]]></valutazione>
-			<valutazione appello="ANA220220420"><![CDATA[18]]></valutazione>
-		</libretto>
-	</studente>
-	<studente matricola="FIL0000001231">
-		<name><![CDATA[Ari Stotele]]></name>
-		<iscritto><![CDATA[FIL]]></iscritto>
-		<libretto>
-		</libretto>
-	</studente>
-	<corso codice="ING">
-		<descrizione><![CDATA[Ingegneria Informatica]]></descrizione>
-		<esame codice="ANA1" />
-		<esame codice="ANA2" />
-		<esame codice="GEO" />
-	</corso>
-	<corso codice="STR">
-		<descrizione><![CDATA[Storia della filosofia]]></descrizione>
-		<esame codice="GEO" />
-	</corso>
-	<corso codice="FIL">
-		<descrizione><![CDATA[Filosofia della Storia]]></descrizione>
-	</corso>
-	<esame codice="ANA1">
-		<descrizione><![CDATA[Analisi Matematica A]]></descrizione>
-		<titolare><![CDATA[Paolo Rossi]]></titolare>
-		<assistente><![CDATA[Luigi Bianchi]]></assistente>
-		<assistente><![CDATA[Lucia Verdi]]></assistente>
-		<appello codice="ANA120220404">
-			<data><![CDATA[2022-04-04]]></data>
-			<tipo><![CDATA[scritto]]></tipo>
-		</appello>
-		<appello codice="ANA120220419">
-			<data><![CDATA[2022-04-19]]></data>
-			<tipo><![CDATA[scritto]]></tipo>
-		</appello>
-	</esame>
-	<esame codice="ANA2">
-		<descrizione><![CDATA[Analisi Matematica B]]></descrizione>
-		<titolare><![CDATA[Lucia Verdi]]></titolare>
-		<assistente><![CDATA[Luigi Bianchi]]></assistente>
-		<appello codice="ANA220220331">
-			<data><![CDATA[2022-03-31]]></data>
-			<tipo><![CDATA[scritto]]></tipo>
-		</appello>
-		<appello codice="ANA220220420">
-			<data><![CDATA[2022-04-20]]></data>
-			<tipo><![CDATA[scritto]]></tipo>
-		</appello>
-	</esame>
-	<esame codice="GEO">
-		<descrizione><![CDATA[Basi della Geografia]]></descrizione>
-		<titolare><![CDATA[Lucia Verdi]]></titolare>
-	</esame>
+  <studente matricola="ING00001301">
+    <name><![CDATA[Giuliano Losi]]></name>
+    <iscritto><![CDATA[ING]]></iscritto>
+    <libretto>
+      <valutazione appello="ANA120220419"><![CDATA[27]]></valutazione>
+      <valutazione appello="ANA220220420"><![CDATA[24]]></valutazione>
+    </libretto>
+  </studente>
+  <studente matricola="ING00009341">
+    <name><![CDATA[Chiara Bonacolsi]]></name>
+    <iscritto><![CDATA[ING]]></iscritto>
+    <libretto>
+      <valutazione appello="ANA120220419"><![CDATA[30]]></valutazione>
+      <valutazione appello="ANA220220420"><![CDATA[30]]></valutazione>
+    </libretto>
+  </studente>
+  <studente matricola="FIL00010201">
+    <name><![CDATA[Matteo Rossi]]></name>
+    <iscritto><![CDATA[FIL]]></iscritto>
+    <libretto>
+      <valutazione appello="ANA120220419"><![CDATA[18]]></valutazione>
+      <valutazione appello="ANA220220420"><![CDATA[18]]></valutazione>
+    </libretto>
+  </studente>
+  <studente matricola="FIL0000001231">
+    <name><![CDATA[Ari Stotele]]></name>
+    <iscritto><![CDATA[FIL]]></iscritto>
+    <libretto>
+    </libretto>
+  </studente>
+  <corso codice="ING">
+    <descrizione><![CDATA[Ingegneria Informatica]]></descrizione>
+    <esame codice="ANA1" />
+    <esame codice="ANA2" />
+    <esame codice="GEO" />
+  </corso>
+  <corso codice="STR">
+    <descrizione><![CDATA[Storia della filosofia]]></descrizione>
+    <esame codice="GEO" />
+  </corso>
+  <corso codice="FIL">
+    <descrizione><![CDATA[Filosofia della Storia]]></descrizione>
+  </corso>
+  <esame codice="ANA1">
+    <descrizione><![CDATA[Analisi Matematica A]]></descrizione>
+    <titolare><![CDATA[Paolo Rossi]]></titolare>
+    <assistente><![CDATA[Luigi Bianchi]]></assistente>
+    <assistente><![CDATA[Lucia Verdi]]></assistente>
+    <appello codice="ANA120220404">
+      <data><![CDATA[2022-04-04]]></data>
+      <tipo><![CDATA[scritto]]></tipo>
+    </appello>
+    <appello codice="ANA120220419">
+      <data><![CDATA[2022-04-19]]></data>
+      <tipo><![CDATA[scritto]]></tipo>
+    </appello>
+  </esame>
+  <esame codice="ANA2">
+    <descrizione><![CDATA[Analisi Matematica B]]></descrizione>
+    <titolare><![CDATA[Lucia Verdi]]></titolare>
+    <assistente><![CDATA[Luigi Bianchi]]></assistente>
+    <appello codice="ANA220220331">
+      <data><![CDATA[2022-03-31]]></data>
+      <tipo><![CDATA[scritto]]></tipo>
+    </appello>
+    <appello codice="ANA220220420">
+      <data><![CDATA[2022-04-20]]></data>
+      <tipo><![CDATA[scritto]]></tipo>
+    </appello>
+  </esame>
+  <esame codice="GEO">
+    <descrizione><![CDATA[Basi della Geografia]]></descrizione>
+    <titolare><![CDATA[Lucia Verdi]]></titolare>
+  </esame>
+  <studente matricola="K000123A">
+    <name>Angelo Bonicelli</name>
+    <iscritto>FIL</iscritto>
+    <libretto>
+    </libretto>
+  </studente>
 </uni>
