@@ -9,14 +9,11 @@
 }
 
 <h5>Codice:</h5>
-@Model.Codice
+<strong>@Model.Codice</strong>
 <h5>Descrizione:</h5>
 @Model.Descrizione
-<h5>Nome professore:</h5>
-@Model.Titolare.NomeCompleto
-<br />
-<h5>Codice professore:</h5>
-@Model.Titolare.Codice
+<h5>Codice - Nome professore:</h5>
+@Model.Titolare.NomeCompleto - <strong>@Model.Titolare.Codice</strong>
 <br />
 @if (@Model.Assistenti.Count != 0)
 {
@@ -40,7 +37,7 @@ else
     <ul>
         @foreach (IAppello appello in Model.Appelli)
         {
-            <li>Esame: @appello.Codice</li>
+            <li>Esame: <strong>@appello.Codice</strong></li>
             <li>Data: @appello.Data</li>
             <li>Tipo appello: @appello.TipoAppello</li>
             <br />

@@ -73,22 +73,29 @@
   <esame codice="GEO">
     <descrizione><![CDATA[Basi della Geografia]]></descrizione>
     <titolare codice="1"><![CDATA[Lucia Verdi]]></titolare>
+	  <appello codice="GEO220221010">
+		  <data><![CDATA[2022-04-20]]></data>
+		  <tipo><![CDATA[scritto]]></tipo>
+	  </appello>
   </esame>
   <studente matricola="K000123A">
     <name>Angelo Bonicelli</name>
     <iscritto>FIL</iscritto>
     <libretto>
-      <valutazione appello="a">18</valutazione>
+      <valutazione appello="ANA120220419">18</valutazione>
     </libretto>
   </studente>
   <studente matricola="000">
     <name>Dio Santo</name>
-    <iscritto>ING</iscritto>
+    <iscritto>STR</iscritto>
     <libretto>
-    </libretto>
+		<valutazione appello="ANA120220419">33</valutazione>
+		<valutazione appello="ANA220220420">33</valutazione>
+		<valutazione appello="GEO220221010">33</valutazione>
+	</libretto>
   </studente>
-  <studente matricola="maurizio">
-    <name>costanzo</name>
+  <studente matricola="ING000123124A">
+    <name>Costanzo Costantini</name>
     <iscritto>ING</iscritto>
     <libretto>
     </libretto>

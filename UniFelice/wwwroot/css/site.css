@@ -18,6 +18,11 @@ body {
   background-color: aliceblue;
 }
 
+img{
+    width: 50%;
+    border: 1px solid black;
+}
+
 /*table, tr, td, th{
     border: 3px dotted red;
 }*/
