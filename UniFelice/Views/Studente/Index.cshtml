@@ -11,6 +11,7 @@
             <th>Matricola</th>
             <th>Nome</th>
             <th>Corso</th>
+            <th>Tipologia libretto</th>
             <th>Esami superati</th>
             <th>Dettaglio</th>
         </tr>
@@ -22,6 +23,7 @@
                 <td><strong>@studente.Matricola</strong></td>
                 <td>@studente.NomeCompleto</td>
                 <td><a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@studente.CorsoIscritto">@studente.CorsoIscritto</a></td>
+                <td>@studente.Libretto.Type</td>
                 <td>@studente.Libretto.Voti.Count</td>
                 <td>
                     <a asp-area="" asp-controller="Studente" asp-action="Dettaglio" asp-route-id="@studente.Matricola">

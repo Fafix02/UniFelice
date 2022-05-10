@@ -52,6 +52,7 @@ namespace UniFelice.Models.xml
             course.InnerText = Course;
             student.AppendChild(course);
             XmlElement libretto = doc.CreateElement("libretto");
+            libretto.SetAttribute("type", ILibretto.Tipo.SCONOSCIUTO + "");
             libretto.InnerText = "";
             student.AppendChild(libretto);
 

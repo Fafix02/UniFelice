@@ -27,7 +27,7 @@
   <studente matricola="FIL0000001231">
     <name><![CDATA[Ari Stotele]]></name>
     <iscritto><![CDATA[FIL]]></iscritto>
-    <libretto>
+    <libretto type="">
     </libretto>
   </studente>
   <corso codice="ING">
