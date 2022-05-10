@@ -8,20 +8,20 @@
 <strong>@Model.Codice</strong><br />
 <h3>Descrizione:</h3>
 @Model.Descrizione<br />
-@if (@Model.CodEsami.Count != 0)
+@if (@Model.Esami.Count != 0)
 {
     <h5>Piano di studi:</h5>
-    <ul>
-        @foreach (string codEsame in Model.CodEsami)
+    <ol>
+        @foreach (IEsame esame in Model.Esami)
         {
-            <li>
-                <a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@codEsame">
-                    <strong>@codEsame</strong>
+                <li>
+                    <a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@esame.Codice">
+                    <strong>@esame.Codice</strong>
                     </a>
-                    </li>
+                </li>
         }
-    </ul>
-    <p>N totale esami: @Model.CodEsami.Count</p>
+    </ol>
+    <p>N totale esami: @Model.Esami.Count</p>
     <br />
 }
 else

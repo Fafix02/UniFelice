@@ -13,6 +13,6 @@ namespace UniFelice.Models.Xml
 
         public string Codice => node.Attributes["codice"].InnerText;
 
-        public string NomeCompleto => node.InnerText;
+        public string NomeCompleto => "Prof. " + node.InnerText;
     }
 }

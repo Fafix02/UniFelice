@@ -13,16 +13,16 @@ namespace UniFelice.Models.Xml
 
         public string Descrizione => node.SelectSingleNode("descrizione").InnerText;
 
-        public List<string> CodEsami
+        public List<IEsame> Esami
         {
             get
             {
-                List<string> toReturn = new ();
+                List<IEsame> toReturn = new ();
                 string path = "esame";
                 XmlNodeList nodes = node.SelectNodes(path);
                 foreach (XmlNode n in nodes)
                 {
-                    toReturn.Add(n.Attributes["codice"].InnerText);
+                    toReturn.Add(new XmlEsame(n));
                 }
                 return toReturn;
             }
