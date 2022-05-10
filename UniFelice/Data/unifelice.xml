@@ -45,7 +45,7 @@
   </corso>
   <esame codice="ANA1">
     <descrizione><![CDATA[Analisi Matematica A]]></descrizione>
-    <titolare><![CDATA[Paolo Rossi]]></titolare>
+    <titolare codice="2"><![CDATA[Paolo Rossi]]></titolare>
     <assistente><![CDATA[Luigi Bianchi]]></assistente>
     <assistente><![CDATA[Lucia Verdi]]></assistente>
     <appello codice="ANA120220404">
@@ -59,7 +59,7 @@
   </esame>
   <esame codice="ANA2">
     <descrizione><![CDATA[Analisi Matematica B]]></descrizione>
-    <titolare><![CDATA[Lucia Verdi]]></titolare>
+    <titolare codice="1"><![CDATA[Lucia Verdi]]></titolare>
     <assistente><![CDATA[Luigi Bianchi]]></assistente>
     <appello codice="ANA220220331">
       <data><![CDATA[2022-03-31]]></data>
@@ -72,7 +72,7 @@
   </esame>
   <esame codice="GEO">
     <descrizione><![CDATA[Basi della Geografia]]></descrizione>
-    <titolare><![CDATA[Lucia Verdi]]></titolare>
+    <titolare codice="1"><![CDATA[Lucia Verdi]]></titolare>
   </esame>
   <studente matricola="K000123A">
     <name>Angelo Bonicelli</name>

@@ -2,6 +2,6 @@
 {
     public interface IProfessore : IPersona
     {
-        public int Codice { get; }
+        public string Codice { get; }
     }
 }

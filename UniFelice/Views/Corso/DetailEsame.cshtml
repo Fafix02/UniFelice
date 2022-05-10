@@ -12,8 +12,11 @@
 @Model.Codice
 <h5>Descrizione:</h5>
 @Model.Descrizione
-<h5>Titolare:</h5>
-@Model.Titolare
+<h5>Nome professore:</h5>
+@Model.Titolare.NomeCompleto
+<br />
+<h5>Codice professore:</h5>
+@Model.Titolare.Codice
 <br />
 @if (@Model.Assistenti.Count != 0)
 {

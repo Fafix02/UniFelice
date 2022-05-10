@@ -45,6 +45,6 @@ namespace UniFelice.Models.Xml
 
         public string? Descrizione => node.SelectSingleNode("descrizione").InnerText;
 
-        public string Titolare => node.SelectSingleNode("titolare").InnerText;
+        public IProfessore Titolare => new XmlProfessore(node.SelectSingleNode("titolare"));
     }
 }
