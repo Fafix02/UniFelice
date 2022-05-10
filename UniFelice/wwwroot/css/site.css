@@ -23,6 +23,11 @@ img{
     border: 1px solid black;
 }
 
+.error {
+    color: darkred;
+    background-color: yellow;
+}
+
 /*table, tr, td, th{
     border: 3px dotted red;
 }*/

@@ -29,15 +29,19 @@ else
 }
 @if (@Model.Appelli.Count != 0)
 {
-    <h3>Appelli disponibli:</h3>
-    <ul>
+    <h3>Elenco Appelli:</h3>
+    <ol>
         @foreach (IAppello appello in Model.Appelli)
         {
-            <li>Esame: <strong>@appello.Codice</strong></li>
-            <li>Data: @appello.Data</li>
-            <li>Tipo appello: @appello.TipoAppello</li>
+            <li>
+                <ul>
+                    <li>Esame: <strong>@appello.Codice</strong></li>
+                    <li>Data: @appello.Data</li>
+                    <li>Tipo appello: @appello.TipoAppello</li>
+                </ul>
+            </li>
         }
-    </ul>
+    </ol>
     <p>N totale appelli: @Model.Appelli.Count</p>
     <br />
 }
@@ -46,5 +50,5 @@ else
     <h2>Nessun Appello al momento disponibile</h2>
 }
 <a asp-area="" asp-controller="Corso" asp-action="Esami">
-    <input type="button" value="Torna alla lista" />
+    <input type="button" value="Torna alla lista esami" />
 </a>

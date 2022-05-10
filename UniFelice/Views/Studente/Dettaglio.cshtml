@@ -8,17 +8,18 @@
     ViewData["Title"] = "Info studente";
 }
 
-<h3>Nome completo:</h3>
+<h4>Nome completo:</h4>
 @Model.NomeCompleto <br />
-<h3>Matricola:</h3>
+<h4>Matricola:</h4>
 <strong>@Model.Matricola</strong> <br />
-<h3>Corso in cui è iscritto:</h3>
+<h4>Corso in cui è iscritto:</h4>
 <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@Model.CorsoIscritto">@Model.CorsoIscritto</a>
 @if(Model.Libretto.Voti.Count != 0){
-    <h5>Tipologia libretto:</h5>
+    <h4>Tipologia libretto:</h4>
     @Model.Libretto.Type
     <br />
-    <h5>Libretto valutazioni:<br /><strong>Appello</strong> - Valutazione</h5>
+    <h4>Libretto valutazioni:<br /></h4>
+    <p><strong>Appello</strong> - Valutazione</p>
     <ol>
     @foreach (var valutazione in Model.Libretto.Voti)
     {
@@ -29,7 +30,7 @@
 }
 else
 {
-    <h4>Nessun esame superato</h4>
+    <h5>Nessun esame superato</h5>
 }
 <br />
 <br />

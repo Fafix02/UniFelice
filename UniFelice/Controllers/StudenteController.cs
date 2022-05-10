@@ -27,9 +27,9 @@ namespace UniFelice.Controllers
         [HttpGet("Dettaglio/{id}")]
         public IActionResult Dettaglio(string id)
         {
-            foreach(IStudente s in archivio.Studenti)
+            foreach (IStudente s in archivio.Studenti)
             {
-                if(s.Matricola == id)
+                if (s.Matricola == id)
                 {
                     return View(s);
                 }
@@ -45,6 +45,15 @@ namespace UniFelice.Controllers
         [HttpPost]
         public IActionResult Success([FromForm] string Matricola, [FromForm] string NomeCognome, [FromForm] string Corso)
         {
+            if (Matricola == null || NomeCognome == null || Corso == null)
+            {
+                return View("Create", $"Errore! compilare tutti i campi {Corso}");
+            } 
+            if (Matricola.Length < 4)
+            {
+                return View("Create", "Errore! la matricola deve essere composta da minimo 3 caratteri");
+            }
+            Corso = Corso.ToUpper();
             bool check = false;
             foreach (ICorsoLaurea corso in corsi.Corsi)
             {
@@ -56,10 +65,10 @@ namespace UniFelice.Controllers
             }
             if (!check)
             {
-                return View("Create", $"Errore non esiste un corso con codice {Corso}");
+                return View("Create", $"Errore! non esiste un corso con codice {Corso}");
             }
             archivio.Add(Matricola, NomeCognome, Corso);
-            return View();
+            return View("Success", Matricola);
         }
 
 
@@ -71,7 +80,10 @@ namespace UniFelice.Controllers
         [HttpPost]
         public IActionResult Check([FromForm] string Matricola, [FromForm] int VotoValutazione, [FromForm] string CodAppello)
         {
-            Debug.WriteLine($"{Matricola} - {VotoValutazione} - {CodAppello}");
+            if (Matricola == null || CodAppello == null)
+            {
+                return View("Register", "Errore! compilare tutti i campi");
+            }
             bool check = false;
             foreach (IStudente studente in archivio.Studenti)
             {
