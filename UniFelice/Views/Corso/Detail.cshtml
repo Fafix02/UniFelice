@@ -8,9 +8,9 @@
     ViewData["Title"] = "Info Corso";
 }
 
-<h5>Codice:</h5>
+<h3>Codice:</h3>
 <strong>@Model.Codice</strong><br />
-<h5>Descrizione:</h5>
+<h3>Descrizione:</h3>
 @Model.Descrizione<br />
 @if (@Model.CodEsami.Count != 0)
 {
@@ -18,7 +18,11 @@
     <ul>
         @foreach (string codEsame in Model.CodEsami)
         {
-            <li><a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@codEsame">@codEsame</a></li>
+            <li>
+                <a asp-area="" asp-controller="Corso" asp-action="DetailEsame" asp-route-id="@codEsame">
+                    <strong>@codEsame</strong>
+                    </a>
+                    </li>
         }
     </ul>
     <p>N totale esami: @Model.CodEsami.Count</p>
@@ -26,7 +30,7 @@
 }
 else
 {
-    <h2>Nessun esame presente nel corso</h2>
+    <h4>Nessun esame presente nel corso</h4>
 }
 <a asp-area="" asp-controller="Corso" asp-action="Index">
     <input type="button" value="Torna alla lista" />

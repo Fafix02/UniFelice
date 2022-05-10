@@ -8,16 +8,16 @@
     ViewData["Title"] = "Dettagli Esame";
 }
 
-<h5>Codice:</h5>
+<h3>Codice:</h3>
 <strong>@Model.Codice</strong>
-<h5>Descrizione:</h5>
+<h3>Descrizione:</h3>
 @Model.Descrizione
-<h5>Codice - Nome professore:</h5>
+<h3>Codice - Nome professore:</h3>
 @Model.Titolare.NomeCompleto - <strong>@Model.Titolare.Codice</strong>
 <br />
 @if (@Model.Assistenti.Count != 0)
 {
-    <h5>Assistenti professore:</h5>
+    <h3>Assistenti professore:</h3>
     <ul>
         @foreach (string assistente in Model.Assistenti)
         {
@@ -29,18 +29,17 @@
 }
 else
 {
-    <h2>Nessun assistente al professore</h2>
+    <h4>Nessun assistente al professore</h4>
 }
 @if (@Model.Appelli.Count != 0)
 {
-    <h5>Appelli disponibli:</h5>
+    <h3>Appelli disponibli:</h3>
     <ul>
         @foreach (IAppello appello in Model.Appelli)
         {
             <li>Esame: <strong>@appello.Codice</strong></li>
             <li>Data: @appello.Data</li>
             <li>Tipo appello: @appello.TipoAppello</li>
-            <br />
         }
     </ul>
     <p>N totale appelli: @Model.Appelli.Count</p>

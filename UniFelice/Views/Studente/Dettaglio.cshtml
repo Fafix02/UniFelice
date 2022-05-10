@@ -8,11 +8,11 @@
     ViewData["Title"] = "Info studente";
 }
 
-<h5>Nome completo:</h5>
+<h3>Nome completo:</h3>
 @Model.NomeCompleto <br />
-<h5>Matricola:</h5>
+<h3>Matricola:</h3>
 <strong>@Model.Matricola</strong> <br />
-<h5>Corso in cui è iscritto:</h5>
+<h3>Corso in cui è iscritto:</h3>
 <a asp-area="" asp-controller="Corso" asp-action="Detail" asp-route-id="@Model.CorsoIscritto">@Model.CorsoIscritto</a>
 @if(Model.Libretto.Voti.Count != 0){
     <h5>Tipologia libretto:</h5>
@@ -25,10 +25,11 @@
         <li><strong>@valutazione.Appello</strong> --- @valutazione.Voto</li>
     }
     </ol>
+    <p>N totale valutazioni: @Model.Libretto.Voti.Count</p>
 }
 else
 {
-    <h5>Nessun esame superato</h5>
+    <h4>Nessun esame superato</h4>
 }
 <br />
 <br />
