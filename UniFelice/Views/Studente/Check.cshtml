@@ -1,17 +1,19 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-
+﻿@model string
 @{
     ViewData["Title"] = "Nuovo voto registrato";
 }
 
-<h1>Nuova valutazione inserita</h1>
-<a asp-area="" asp-controller="Studente" asp-action="Index">
-    <input type="button" value="Torna alla lista studenti" />
+<h2>Nuova valutazione inserita nel libretto dello studente con matricola @Model!</h2>
+<a asp-area="" asp-controller="Studente" asp-action="Dettaglio" asp-route-id="@Model">
+    <input type="button" value="Vai alla pagina dello studente" />
 </a>
 <br />
 <br />
 <a asp-area="" asp-controller="Studente" asp-action="Register">
+    <input type="button" value="Aggiungi una nuova valutazione" />
+</a>
+<br />
+<br />
+<a asp-area="" asp-controller="Studente" asp-action="Index">
     <input type="button" value="Aggiungi una nuova valutazione" />
 </a>

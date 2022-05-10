@@ -90,7 +90,7 @@ namespace UniFelice.Controllers
                 return View("Register", $"Errore la valutazione inserita ({VotoValutazione}) non è valida");
             }
             archivio.AddValutazione(Matricola, VotoValutazione, CodAppello);
-            return View();
+            return View("Check", Matricola);
         }
     }
 }
