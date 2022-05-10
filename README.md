@@ -3,6 +3,7 @@ UniFelice
 This should work :)
 
 Requirments:
+
 • visualizzare per ciascun corso, il piano di studi (l’elenco degli esami) con i titolari delle varie cattedre
 
 • visualizzare per uno specifico esame (dettaglio), anche i professori assistenti e l’elenco degli appelli
