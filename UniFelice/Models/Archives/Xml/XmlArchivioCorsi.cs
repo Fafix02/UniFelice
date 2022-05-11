@@ -28,7 +28,6 @@ namespace UniFelice.Models.Xml
                 XmlNodeList nodes = Doc.SelectNodes(pattern);
                 foreach (XmlNode node in nodes)
                 {
-                    Debug.WriteLine(node.SelectSingleNode("descrizione").InnerText);
                     toReturn.Add(new XmlCorso(node));
                 }
                 return toReturn;

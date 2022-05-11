@@ -12,6 +12,7 @@ namespace UniFelice.Controllers
     {
         private readonly IArchivio archivio;
         private readonly IArchivioCorsi corsi;
+
         public StudenteController()
         {
             string percorsoArchivio = Directory.GetCurrentDirectory() + @"/Data/unifelice.xml";
@@ -37,6 +38,7 @@ namespace UniFelice.Controllers
             return BadRequest($"Errore studente con matricola {id} non trovato");
         }
 
+        #region Create Studente
         public IActionResult Create()
         {
             return View("Create", string.Empty);
@@ -70,8 +72,9 @@ namespace UniFelice.Controllers
             archivio.Add(Matricola, NomeCognome, Corso);
             return View("Success", Matricola);
         }
+        #endregion
 
-
+        #region AddExam
         public IActionResult Register()
         {
             return View("Register", string.Empty);
@@ -104,5 +107,6 @@ namespace UniFelice.Controllers
             archivio.AddValutazione(Matricola, VotoValutazione, CodAppello);
             return View("Check", Matricola);
         }
+        #endregion
     }
 }

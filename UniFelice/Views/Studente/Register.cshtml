@@ -1,7 +1,9 @@
-﻿@model string
+﻿@using UniFelice.Models.xml
+@model string
 
 @{
     ViewData["Title"] = "Registrazione Voto";
+    IArchivio matrStudenti = new XmlArchivio(Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
 }
 
 @if (Model.Length != 0)
@@ -11,11 +13,19 @@
 
 <h1>Registrazione nuovo voto sul libretto: </h1>
 <form method="post" asp-area="" asp-controller="Studente" asp-action="Check">
-    <label for="txtMat">Matricola:</label>
-    <input type="text" id="txtMat" name="Matricola" required /> <br /> <br />
+    <label for="comboMatr">Matricola dello studente:</label>
+    <select id="comboMatr" name="Matricola" required>
+        @foreach (IStudente matr in matrStudenti.Studenti)
+        {
+            <option value="@matr.Matricola">@matr.NomeCompleto</option>
+        }
+    </select> <br /> <br />
+
     <label for="numVoto">Valutazione:</label>
     <input type="number" id="numVoto" name="VotoValutazione" value="18" min="18" max="33" required/> <br /> <br />
+
     <label for="txtAppello">Codice Appello:</label>
     <input type="text" id="txtAppello" name="CodAppello" required /> <br /> <br />
+
     <input type="submit" value="Insresci valutazione"/>
 </form>

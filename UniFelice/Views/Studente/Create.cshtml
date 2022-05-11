@@ -1,7 +1,9 @@
-﻿@model string
+﻿@using UniFelice.Models.Xml
+@model string
 
 @{
     ViewData["Title"] = "Registrazione studente";
+    IArchivioCorsi codCorsi = new XmlArchivioCorsi(Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
 }
 
 @if (Model.Length != 0)
@@ -13,9 +15,17 @@
 <form method="post" asp-area="" asp-controller="Studente" asp-action="Success">
     <label for="txtMat">Matricola:</label>
     <input type="text" id="txtMat" name="Matricola" minlength="3" required /> <br /> <br />
+
     <label for="txtNome">Nome completo:</label>
     <input type="text" id="txtNome" name="NomeCognome" required/> <br /> <br />
-    <label for="txtCorso">Codice Corso:</label>
-    <input type="text" id="txtCorso" name="Corso" minlength="3" required/> <br /> <br />
+
+    <label for="comboCorso">Corso in cui iscrivere lo studente:</label>
+    <select id="comboCorso" name="Corso" required>
+        @foreach (ICorsoLaurea codice in codCorsi.Corsi)
+        {
+            <option value="@codice.Codice">@codice.Descrizione</option>
+        }
+    </select> <br /> <br />
+
     <input type="submit" value="Crea studente"/>
 </form>
