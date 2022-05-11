@@ -35,7 +35,7 @@
     <esame codice="ANA1" />
     <esame codice="ANA2" />
     <esame codice="GEO" />
-	  <esame codice="INF" />
+    <esame codice="INF" />
   </corso>
   <corso codice="STR">
     <descrizione><![CDATA[Storia della filosofia]]></descrizione>
@@ -43,7 +43,7 @@
   </corso>
   <corso codice="FIL">
     <descrizione><![CDATA[Filosofia della Storia]]></descrizione>
-	  <esame codice="INF" />
+    <esame codice="INF" />
   </corso>
   <esame codice="ANA1">
     <descrizione><![CDATA[Analisi Matematica A]]></descrizione>
@@ -80,14 +80,14 @@
       <tipo><![CDATA[orale]]></tipo>
     </appello>
   </esame>
-	<esame codice="INF">
-		<descrizione><![CDATA[Informatica Pragmatica]]></descrizione>
-		<titolare codice="54"><![CDATA[Caio Sempronio]]></titolare>
-		<appello codice="INF2202299">
-			<data><![CDATA[2000-04-20]]></data>
-			<tipo><![CDATA[misto]]></tipo>
-		</appello>
-	</esame>
+  <esame codice="INF">
+    <descrizione><![CDATA[Informatica Pragmatica]]></descrizione>
+    <titolare codice="54"><![CDATA[Caio Sempronio]]></titolare>
+    <appello codice="INF2202299">
+      <data><![CDATA[2000-04-20]]></data>
+      <tipo><![CDATA[misto]]></tipo>
+    </appello>
+  </esame>
   <studente matricola="K000123A">
     <name>Angelo Bonicelli</name>
     <iscritto>FIL</iscritto>

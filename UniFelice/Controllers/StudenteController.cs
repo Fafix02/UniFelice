@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Xml;
 using System.Xml.Linq;
 using UniFelice.Models;
+using UniFelice.Models.Archives.Xml;
 using UniFelice.Models.xml;
 using UniFelice.Models.Xml;
 
@@ -69,7 +70,7 @@ namespace UniFelice.Controllers
             {
                 return View("Create", $"Errore! non esiste un corso con codice {Corso}");
             }
-            archivio.Add(Matricola, NomeCognome, Corso);
+            AddXmlData.Add(Matricola, NomeCognome, Corso, Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
             return View("Success", Matricola);
         }
         #endregion
@@ -104,7 +105,7 @@ namespace UniFelice.Controllers
             {
                 return View("Register", $"Errore la valutazione inserita ({VotoValutazione}) non è valida");
             }
-            archivio.AddValutazione(Matricola, VotoValutazione, CodAppello);
+            AddXmlData.AddValutazione(Matricola, VotoValutazione, CodAppello, Directory.GetCurrentDirectory() + @"/Data/unifelice.xml");
             return View("Check", Matricola);
         }
         #endregion
